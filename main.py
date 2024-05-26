@@ -1,4 +1,4 @@
-from funcs import json_to_list, correct_data, five_operations, dt_to_str, masked
+from coursework3.funcs import json_to_list, correct_data, five_operations, dt_to_str, masked
 
 
 def main():
