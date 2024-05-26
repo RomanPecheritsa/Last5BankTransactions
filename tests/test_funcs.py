@@ -14,6 +14,6 @@ def test_correct_data(list_dict, expected):
     assert correct_data(list_dict) == expected
 
 
-def test_correct_json():
+def test_json_to_list():
     with pytest.raises(FileNotFoundError):
         json_to_list('egegeg/error.txt')
