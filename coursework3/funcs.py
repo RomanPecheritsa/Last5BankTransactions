@@ -23,7 +23,7 @@ def correct_data(data):
 
 
 def five_operations(data):
-    """Сортировка данных по убыванию, оставляем только 5 первыхаписей"""
+    """Сортировка данных по убыванию дат, оставляем только 5 первыхаписей"""
     new_data = sorted(data, key=lambda x: x['date'], reverse=True)[:5]
     return new_data
 
