@@ -17,3 +17,10 @@ def correct_data(data):
             correct.append(obj)
     return correct
 
+
+def five_operations(data):
+    new_data = sorted(data, key=lambda x: x['date'], reverse=True)[:5]
+    return new_data
+
+
+
