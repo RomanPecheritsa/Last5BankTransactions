@@ -2,7 +2,7 @@ import pytest
 from datetime import datetime
 from coursework3.funcs import (correct_data, json_to_list,
                                five_operations, dt_to_str,
-                               masked)
+                               masked, transfer_amount_currency)
 
 
 @pytest.mark.parametrize('list_dict, expected', [
@@ -43,3 +43,20 @@ def test_masked():
     assert masked("Счет 64686473678894779589") == 'Счет **9589'
     assert masked("Visa Classic 6831982476737658") == 'Visa Classic 6831 98** **** 7658'
     assert masked(None) == 'Unknown'
+
+
+def test_transfer_amount_currency():
+    assert transfer_amount_currency({
+        "id": 41428829,
+        "state": "EXECUTED",
+        "date": "2019-07-03T18:35:29.512364",
+        "operationAmount": {
+          "amount": "8221.37",
+          "currency": {
+            "name": "USD",
+            "code": "USD"
+          }
+        },
+        "description": "Перевод организации",
+        "from": "MasterCard 7158300734726758",
+        "to": "Счет 35383033474447895560"}) == '8221.37 USD'
