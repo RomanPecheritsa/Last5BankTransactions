@@ -23,4 +23,8 @@ def five_operations(data):
     return new_data
 
 
+def dt_to_str(dt):
+    pattern = '%d.%m.%Y'
+    return dt.strftime(pattern)
+
 
