@@ -56,3 +56,8 @@ def masked(source):
     else:
         return f'{" ".join(name)} {masked_card()}'
 
+
+def transfer_amount_currency(op):
+    amount = op['operationAmount']['amount']
+    currency = op['operationAmount']['currency']['name']
+    return f'{amount} {currency}'
