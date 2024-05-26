@@ -42,3 +42,4 @@ def test_dt_to_str():
 def test_masked():
     assert masked("Счет 64686473678894779589") == 'Счет **9589'
     assert masked("Visa Classic 6831982476737658") == 'Visa Classic 6831 98** **** 7658'
+    assert masked(None) == 'Unknown'
