@@ -28,13 +28,13 @@ git clone git@github.com:RomanPecheritsa/coursework3.git
 ```bash
 cd coursework3/
 poetry install
+poetry shell
 ```
-### Запуск функции
+### Запуск проекта
 ```bash
-poetry run go
+go
 ```
 ### Запуск тестирования и показ процента покрытия
 ```bash
-cd tests
 pytest --cov coursework3 --cov-report term-missing
 ```
