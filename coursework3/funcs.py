@@ -23,7 +23,7 @@ def correct_data(data):
 
 
 def five_operations(data):
-    """Сортировка данных по убыванию дат, оставляем только 5 первыхаписей"""
+    """Сортировка данных по убыванию дат, оставляем только 5 записей"""
     new_data = sorted(data, key=lambda x: x['date'], reverse=True)[:5]
     return new_data
 
@@ -58,6 +58,7 @@ def masked(source):
 
 
 def transfer_amount_currency(op):
+    """Получение суммы и валюты транзакции"""
     amount = op['operationAmount']['amount']
     currency = op['operationAmount']['currency']['name']
     return f'{amount} {currency}'
