@@ -1,9 +1,9 @@
 import json
-from os.path import abspath
 from datetime import datetime
+from config import OPERATION_PATH
 
 
-def json_to_list(path=abspath('data/operations.json')):
+def json_to_list(path=OPERATION_PATH):
     """Дессериалиация json"""
     with open(path, encoding='utf-8') as file:
         data = json.load(file)
